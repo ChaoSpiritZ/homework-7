@@ -1,0 +1,32 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		Console.WriteLine("Enter text then another text (StartsWith function): ");
+		string str = Console.ReadLine();
+		String check = Console.ReadLine();
+		bool yep = startsWith(str,check);
+		if(yep == true)
+		{
+		    Console.WriteLine("Yep");
+		}
+		else
+		{
+			Console.WriteLine("Nope");
+		}
+	}
+	
+	public static bool startsWith(string str, string check)
+	{
+		for(int counter = 0;counter < check.Length;counter++)
+		{
+			if(str[counter] != check[counter])
+			{
+				return false;
+			}
+		}
+		return true;
+	}
+}
